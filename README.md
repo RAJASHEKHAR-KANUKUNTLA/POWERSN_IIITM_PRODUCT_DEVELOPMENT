@@ -18,7 +18,17 @@ TEAM K-TECH Sree Kanna
 
 - To enable cloud-based communication, the project incorporates an ESP module, which facilitates TX and RX communication for transmitting data to an IoT platform. This integration allows users to remotely track and analyze energy consumption patterns, making the solution suitable for a wide range of applications, from smart homes to industrial settings.
 
-- By combining the advanced features of the VSD Squadron Mini Board and IoT connectivity, the project aims to enhance ene
+- By combining the advanced features of the VSD Squadron Mini Board and IoT connectivity, the project aims to enhance energy
+
+# OPERATION OF THE SYSTEM  
+
+- The smart energy meter solution combines hardware and software to monitor energy consumption and calculate costs in real time. The system begins with a traditional energy meter that generates pulses corresponding to the consumed energy. To ensure safety, these pulses are isolated from the microcontroller using an optocoupler.
+
+ - The pulses are processed using the VSD Squadron Mini Board, which counts them to calculate energy usage. The board also computes the cost of consumed energy based on a predefined cost per unit. This data, including energy usage and cost, is displayed on the connected LCD screen for local, real-time monitoring. A relay module enables integration with external devices for further control or automation, while a reset button allows users to clear the data after payment, starting a new billing cycle.
+
+- For cloud communication, the system incorporates an ESP module, which handles TX and RX communication to transmit processed data to an IoT platform. Users can remotely access and analyze energy usage and cost data through the cloud, leveraging platforms such as the Arduino IoT Cloud or similar services. A user-friendly interface is available via IoT remote apps, allowing users to monitor consumption, costs, and reset data conveniently.
+
+ - The entire system is developed using the Arduino IDE, providing a robust environment for coding and deploying the firmware necessary for data processing, communication, and control. This integration of the VSD Squadron Mini Board with IoT capabilities offers a reliable, scalable, and user-friendly solution for efficient energy and cost management.
 
 
 # Pin Out table:
