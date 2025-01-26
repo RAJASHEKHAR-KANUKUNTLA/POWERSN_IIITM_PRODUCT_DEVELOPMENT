@@ -150,4 +150,18 @@ The development and deployment of a low-cost IoT-based smart energy meter will a
 # Source code of Arduino iot cloud for ESP32 with comments
 -----------
 -----------
+# Images of the product
 
+
+----------
+-------------
+# Demonstration Video of the Product
+--------
+--------
+
+===============================
+# about
+===============
+# Conclusion
+
+Users benefit from real-time feedback displayed on the LCD screen, remote monitoring through IoT platforms, and easy interaction via IoT apps, making energy management more efficient and transparent. This versatile solution is adaptable for use in homes, EV charging stations, and industrial settings, offering scalable energy monitoring and control across various applications.
