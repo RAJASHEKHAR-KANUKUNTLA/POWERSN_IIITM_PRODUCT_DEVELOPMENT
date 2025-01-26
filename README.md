@@ -76,6 +76,9 @@ TEAM K-TECH Sree Kanna
 |LM393 Comparator |D0      |  VSDSquadron mini   GPIO PD6                |
 |                 |5V       |VSDSquadron mini 5V|
 |                 |         |VSDSquadron mini GND|
+|I2C LCD |	SDA|	vsdsquadron mini GPIO (PC1)|
+|            |SCA|	vsdsquadron mini GPIO (PC2)|
+![image](https://github.com/user-attachments/assets/4474a78d-11d5-4fd9-b0b7-a81303598335)
 
 # Block Diagram of the System 
 ![Blank diagram (1)](https://github.com/user-attachments/assets/c3e824d7-7cd9-4bdf-a4bd-6e9d4d6815ec)
