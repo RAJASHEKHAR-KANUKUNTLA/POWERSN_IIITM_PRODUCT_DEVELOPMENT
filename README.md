@@ -1,6 +1,6 @@
 # POWERSN_IIITM_PRODUCT_DEVELOPMENT
+===========================================================
 TEAM K-TECH Sree Kanna 
-
 
 
 
@@ -76,4 +76,10 @@ TEAM K-TECH Sree Kanna
 |                 |5V       |VSDSquadron mini 5V|
 |                 |         |VSDSquadron mini GND|
 
+# Block Diagram of the System 
+
+---------------
+
+# Circuit Diagram of the System
+----------------
 
