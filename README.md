@@ -12,7 +12,7 @@ TEAM K-TECH Sree Kanna
 - This project aims to develop a low-cost IoT-based smart energy meter to address these challenges. The proposed meter will enable real-time monitoring and accurate energy consumption tracking, ensuring both efficiency and affordability.
 
 
-# OVER VIEW OF PROJECT  
+# OVER VIEW OF PRODUCT  
 
 - The IoT Smart Energy Meter project aims to deliver a low-cost, efficient solution for monitoring energy consumption by utilizing the VSD Squadron Mini Board with an LCD display and a relay module. This system measures real-time energy usage and presents the data on the LCD screen, ensuring immediate and local monitoring.
 
@@ -30,7 +30,7 @@ TEAM K-TECH Sree Kanna
 
  - The entire system is developed using the Arduino IDE, providing a robust environment for coding and deploying the firmware necessary for data processing, communication, and control. This integration of the VSD Squadron Mini Board with IoT capabilities offers a reliable, scalable, and user-friendly solution for efficient energy and cost management.
 
-# TABLE OF COMPONENTES REQUIRED FOR THE PROTOTYPE
+# TABLE OF COMPONENTS REQUIRED FOR THE PRODUCT
 
 | Item    | Quantity |
 |---------|-----|
