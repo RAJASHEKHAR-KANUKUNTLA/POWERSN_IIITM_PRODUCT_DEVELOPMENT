@@ -37,7 +37,7 @@ TEAM K-TECH Sree Kanna
 |  4N35 Optocoupler   | 1  | 
 |VSDSquadron mini| 1|
 | ESP32 MODULE | 1  |  |
-| 128*64 OLED display | 1 | Display |
+| 16*2 i2cLCD display | 1 | Display |
 | Connecting wires | 1Set |
 |2 CH relay5V -240V|1|
 |5v-voltage regulator adaptor| 1|
