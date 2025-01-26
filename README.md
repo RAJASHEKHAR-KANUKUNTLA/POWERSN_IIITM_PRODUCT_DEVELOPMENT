@@ -30,7 +30,8 @@ TEAM K-TECH Sree Kanna
 
  - The entire system is developed using the Arduino IDE, providing a robust environment for coding and deploying the firmware necessary for data processing, communication, and control. This integration of the VSD Squadron Mini Board with IoT capabilities offers a reliable, scalable, and user-friendly solution for efficient energy and cost management.
 
-# Table of Components required for the prototype
+# TABLE OF COMPONENTES REQUIRED FOR THE PROTOTYPE
+
 | Item    | Quantity |
 |---------|-----|
 |Single phase Energy meter 240v 50Hz     | 1  | 
@@ -45,7 +46,7 @@ TEAM K-TECH Sree Kanna
 |Switch | 1 |
 | Case box | 1|
 
-# Pin Out table:
+# PIN OUT TABLE  
 
 |Component     	|    Pin/Connection	 |     Connected To|
 |----------------|--------------------|-----------------|
