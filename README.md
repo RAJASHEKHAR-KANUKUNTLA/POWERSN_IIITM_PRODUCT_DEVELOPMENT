@@ -46,8 +46,8 @@ TEAM K-TECH Sree Kanna
 |                |                          |                                       |	
 |5 volt adaptaor | 	Phase	|Phase of the energy meter                 |
 |                 |	Netural |	Netural of the energy meter         |
-|	5V	  |VSDSquadron mini|  VCC                                    |
-|	GND	|VSDSquadron mini | GND                    |                 
+|             |	5V	  |VSDSquadron mini|  VCC                                    |
+|              |	GND	|VSDSquadron mini | GND                    |                 
 |LM393 Comparator |D0      |  VSDSquadron mini   GPIO PD6                |
 |                 |5V       |VSDSquadron mini 5V|
 |                 |         |VSDSquadron mini GND|
