@@ -150,17 +150,16 @@ The development and deployment of a low-cost IoT-based smart energy meter will a
 
 # SOURCE CODE OF VSDSQUARDRON MINI AN ESP32 
 --------
------------
+
 # IMAGES OF THE PROJECT
 ----------
--------------
+
 # DEMONSTRATION VIDEO OF THE PRODUCT Demonstration  
 --------
---------
 
-===============================
+
 # ABOUT 
-===============
+
 # CONCLUSION  
 The smart energy meter project effectively integrates hardware and software components to deliver a reliable and user-friendly solution for real-time energy monitoring and cost management. By utilizing the VSD Squadron Mini Board, optocoupler, LCD display, relay module, and ESP module, the system ensures precise energy consumption tracking, cost calculation, and seamless cloud-based data access.
 Users benefit from real-time feedback displayed on the LCD screen, remote monitoring through IoT platforms, and easy interaction via IoT apps, making energy management more efficient and transparent. This versatile solution is adaptable for use in homes, EV charging stations, and industrial settings, offering scalable energy monitoring and control across various applications.
