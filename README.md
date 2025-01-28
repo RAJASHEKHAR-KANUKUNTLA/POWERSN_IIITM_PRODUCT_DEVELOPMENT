@@ -5,6 +5,17 @@ TEAM K-TECH Sree Kanna
 
 - [INTRODUCTION](#introduction)
 - [OVERVIEW OF THE PRODUCT](#OVER-VIEW-OF-THE-PRODUCT)
+- [OPERATAION OF THE SYSTEM](#operation-of-the-product)
+- [FEATURES AND BENEFITES OF THE PRODUCT](features-and-benefities-of-the-product)
+- [ADVANTAGES OF THE PRODUCT](advantages-of-the-product)
+- [TABLE OF COMPONENTS REQUIRED FOR THE PRODUCT](Table-of-components-required-for-the-product)
+- [PIN OUT TABLE](pin-out-table)
+- [BLOCK DIAGRAM OF THE SYSTEM ](block-diagram-of-the-system)
+- [CIRCUIT DIAGRAM OF THE SYSTEM ](circuit-diagram-of-the-system)
+- [INTRODUCTION TO ARDUINO IOT CLOUD ](introduction-to-arduino-iot-cloud)
+- [USER DASHBOARD OF ARDUINO IOT CLOUD IN PC](user-dashboard-of-arduino-iot-cloud-in-pc)
+- [SOURCE CODE OF VSDSQUARDRON MINI AN ESP32](source-code-of-vsdsquadradron-mini-an-esp32)
+- [IMAGES OF THE PROJECT](images-of-the-product)
 - 
 # INTRODUCTION  
 - The development of IoT-based smart energy meters marks a significant step forward in energy management technology. These devices utilize the Internet of Things (IoT) to enable real-time monitoring, precise data collection, and user-friendly interfaces, addressing key challenges faced by both consumers and power companies. They promote energy awareness and encourage responsible usage.
@@ -142,14 +153,17 @@ The development and deployment of a low-cost IoT-based smart energy meter will a
 ![Screenshot (145)](https://github.com/RAJASHEKHAR-KANUKUNTLA/PROJECT-SEM-15/assets/146096356/448d21a2-a2d9-43b7-8e12-694bdace533b)
 
 
-# USER DASHBOARD OF ARDUINO IOT CLOUD IN   MOBILE
+# USER DASHBOARD OF ARDUINO IOT CLOUD IN  MOBILE
 
 ![WhatsApp Image 2024-07-10 at 13 03 21](https://github.com/RAJASHEKHAR-KANUKUNTLA/PROJECT-SEM-15/assets/146096356/ab2cfe90-cf67-4e91-8f97-14a23b1bfb78)
 
 
 
 # SOURCE CODE OF VSDSQUARDRON MINI AN ESP32 
---------
+
+```
+codes come here
+```
 
 # IMAGES OF THE PROJECT
 ----------
