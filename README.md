@@ -169,14 +169,21 @@ codes come here
 ----------
 
 # DEMONSTRATION VIDEO OF THE PRODUCT Demonstration  
---------
+
+
+
+
+https://github.com/user-attachments/assets/0e9a610c-dd3c-4bfb-90b5-bae959fe861b
+
+
 
 
 # ABOUT 
 We are Rajashekhar and Navaneeth Kumar, and we have developed a low-cost IoT-based smart energy meter designed for the DIR-V Product Development Hackathon. Our system seamlessly integrates hardware and software components to deliver an efficient and scalable energy management solution
-The hardware includes an energy meter with pulse output, an optocoupler for electrical isolation, the VSD Squadron Mini Board for processing, an ESP module for TX/RX-based cloud communication, an LCD display for local data visualization, and a relay module for control functions.
+The hardware includes an energy meter with pulse output, an optocoupler for electrical isolation, the VSD Squadron Mini Board for processing, an ESP module for TX/RX-based cloud communication, an LCD display for local data visualization, and a relay module for turning on and off the mains supply control functions.
 - Users can observe their energy consumption values in real-time on their mobile devices via the Arduino IoT Remote app, which also offers the capability to turn the system on or off if the bill is not paid, adding a layer of financial management. The app further allows users to reset the data, starting a new billing cycle. This smart energy meter system can be implemented in various settings, including home energy meters, industrial applications, EV charging stations, and prepaid energy meters, offering versatile and scalable solutions for different energy management needs. The integration of these technologies offers real-time energy monitoring, cost savings, user control, enhanced safety, and cloud-based analysis. By providing comprehensive and reliable energy management, our smart energy meter solution empowers users to optimize their energy usage and reduce costs effectively.
 - This smart energy meter system is versatile and can be implemented in home energy meters, industrial applications, EV charging stations, and prepaid energy metering, providing scalable solutions for different energy management needs. By integrating real-time monitoring, cost savings, user control, enhanced safety, and cloud-based analysis, our solution empowers users to optimize their energy usage and reduce costs effectively.
+  
 # CONCLUSION  
 The smart energy meter project effectively integrates hardware and software components to deliver a reliable and user-friendly solution for real-time energy monitoring and cost management. By utilizing the VSD Squadron Mini Board, optocoupler, LCD display, relay module, and ESP module, the system ensures precise energy consumption tracking, cost calculation, and seamless cloud-based data access.
 Users benefit from real-time feedback displayed on the LCD screen, remote monitoring through IoT platforms, and easy interaction via IoT apps, making energy management more efficient and transparent. This versatile solution is adaptable for use in homes, EV charging stations, and industrial settings, offering scalable energy monitoring and control across various applications.
