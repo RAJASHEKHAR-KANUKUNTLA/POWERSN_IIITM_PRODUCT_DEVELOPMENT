@@ -4,7 +4,7 @@ TEAM K-TECH Sree Kanna
 # Table of the Content
 
 - [INTRODUCTION](#introduction)
-- [OVERVIEW OF THE PRODUCT](#OVER-VIEW-OF-THE-PRODUCT)
+- [OVER VIEW OF PRODUCT](#OVER-VIEW-OF-THE-PRODUCT)
 - [OPERATAION OF THE SYSTEM](#operation-of-the-product)
 - [FEATURES AND BENEFITES OF THE PRODUCT](features-and-benefities-of-the-product)
 - [ADVANTAGES OF THE PRODUCT](advantages-of-the-product)
