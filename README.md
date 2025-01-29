@@ -5,7 +5,7 @@ TEAM K-TECH Sree Kanna
 
 - [INTRODUCTION](#introduction)
 - [OVER VIEW OF PRODUCT](#OVER-VIEW-OF-THE-PRODUCT)
-- [OPERATAION OF THE SYSTEM](#operation-of-the-system)
+- [OPERATAION OF THE SYSTEM](#OPERATAION-OF-THE-SYSTEM)
 - [FEATURES AND BENEFITES OF THE PRODUCT](features-and-benefities-of-the-product)
 - [ADVANTAGES OF THE PRODUCT](advantages-of-the-product)
 - [TABLE OF COMPONENTS REQUIRED FOR THE PRODUCT](Table-of-components-required-for-the-product)
