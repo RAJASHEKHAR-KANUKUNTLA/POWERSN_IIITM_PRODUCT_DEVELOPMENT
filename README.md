@@ -165,8 +165,252 @@ The development and deployment of a low-cost IoT-based smart energy meter will a
 
 # SOURCE CODE OF VSDSQUARDRON MINI AN ESP32 
 
+# code for VSDSquardron mini
 ```
-codes come here
+#include <Arduino.h>
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+volatile int pulseCount = 0;      // Variable to store pulse count
+int sensorPin = PD2;                // Pin connected to the LDR sensor (Interrupt pin)
+int mirrorPin = PD3;                // Pin to output mirror pulses
+int resetButtonPin = PD4;           // Pin for reset button
+const int pulsesPerKWH = 10;      // Number of pulses per kWh
+const int costPerKWH = 3;         // Cost per kWh in Rs
+
+// I2C LCD configuration
+LiquidCrystal_I2C lcd(0x27, 16, 2); // Change 0x27 to your LCD's I2C address if needed
+
+void countPulse() {
+  pulseCount++;                 // Increment pulse count
+  digitalWrite(mirrorPin, HIGH); // Output pulse to mirror pin
+  delayMicroseconds(100);        // Short pulse width
+  digitalWrite(mirrorPin, LOW);  // Reset mirror pin
+}
+
+void setup() {
+  pinMode(sensorPin, INPUT_PULLUP);  // Configure sensor pin as input with pull-up resistor
+  pinMode(mirrorPin, OUTPUT);        // Configure mirror pin as output
+  pinMode(resetButtonPin, INPUT_PULLUP); // Configure reset button pin as input with pull-up resistor
+  digitalWrite(mirrorPin, LOW);      // Ensure mirror pin is LOW initially
+
+  // Attach interrupt to the sensor pin for rising edge
+   attachInterrupt(
+    sensorPin,                 // GPIO pin
+      GPIO_Mode_IPU,             // Input mode with pull-up
+      countPulse,                // Callback function
+      EXTI_Mode_Interrupt,       // Interrupt mode
+      EXTI_Trigger_Rising        // Trigger on rising edge
+  );
+
+  // Initialize I2C LCD
+  lcd.init();
+  lcd.backlight();
+  lcd.setCursor(0, 0);
+  lcd.print("System Initializing");
+  delay(2000);
+  lcd.clear();
+}
+
+void loop() {
+  static unsigned long lastDisplayTime = 0;
+
+  // Calculate kWh and cost based on pulse count
+  int kWh = pulseCount / (int)pulsesPerKWH; // Convert pulse count to kWh
+  int cost = kWh * costPerKWH;                // Calculate cost 
+
+  // Check if the reset button is pressed
+  if (digitalRead(resetButtonPin) == LOW) {
+    pulseCount = 0; // Reset pulse count
+    lcd.clear();    // Clear the LCD display
+    lcd.setCursor(0, 0);
+    lcd.print("Data Reset");
+    delay(2000);    // Delay to show "Data Reset" message
+    lcd.clear();    // Clear the LCD again for new data
+  }
+
+  // Update LCD every second
+  if (millis() - lastDisplayTime >= 1000) {
+    lastDisplayTime = millis();
+
+    // Update LCD with kWh and cost
+    lcd.setCursor(0, 0); // First row
+    lcd.print("kWh: ");
+    lcd.print(kWh); // Display kWh with 3 decimal places
+    lcd.setCursor(0, 1); // Second row
+    lcd.print("Cost: Rs ");
+    lcd.print(cost); // Display cost with 2 decimal places
+  }
+}
+```
+# code for esp module 
+
+```
+#include <ArduinoIoTCloud.h>
+#include "thingProperties.h"
+#include <Arduino_ConnectionHandler.h>
+#include <WiFi.h>
+#include <Wire.h>
+#include <EEPROM.h> // Include the EEPROM library
+#include <LiquidCrystal_I2C.h> // Include the I2C LCD library
+
+const char THING_ID[] = "7e6b9eb0-e7ef-4d26-be40-93e38d639052"; // Replace with your Thing ID
+
+#define I2C_ADDR 0x27 // I2C address for the LCD
+#define LCD_COLUMNS 16
+#define LCD_ROWS 2
+
+LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_ROWS);
+
+// Define the GPIO pins
+const int pulsePin = 15; // Change this to the pin you are using
+const int resetPin = 4;  // Pin connected to the reset button
+const int relayPin0 = 13;  // Pin connected to the relay
+const int relayPin1 = 12;
+const int arduinoResetPin = 14;  // Pin to trigger Arduino reset (set this to a GPIO pin on ESP32)
+
+// Number of impulses per kWh (3200 for this meter)
+const int impulsesPerKWh = 10; // Change the pulses
+
+// Variables to store pulse count and energy consumption
+volatile unsigned long pulseCount = 0;
+float energyConsumed = 0.0;
+
+// EEPROM address to store energy consumed
+const int eepromAddress = 0;
+
+// Price per kWh (replace with your rate)
+const float pricePerKWh = 3; // Example price
+
+// Cloud variables
+void IRAM_ATTR onPulse() {
+  pulseCount++;
+}
+
+void setup() {
+  // Initialize I2C LCD display
+  lcd.init();
+  lcd.backlight();
+  lcd.setCursor(0, 0);
+  lcd.print("SMART ENERGY METER");
+  delay(2000);
+  lcd.clear();
+
+  // Initialize serial communication
+  Serial.begin(115200);
+  initProperties();
+
+  // Set the pulse pin as input
+  pinMode(pulsePin, INPUT);
+  // Set the reset pin as input with internal pull-up resistor
+  pinMode(resetPin, INPUT_PULLUP);
+  // Set the relay pin as output
+  pinMode(relayPin0, OUTPUT);
+  pinMode(relayPin1, OUTPUT);
+  pinMode(arduinoResetPin, OUTPUT);  // Set reset pin to output
+  digitalWrite(arduinoResetPin, HIGH);
+
+  // Attach interrupt to the pulse pin, triggered on falling edge
+  attachInterrupt(digitalPinToInterrupt(pulsePin), onPulse, FALLING);
+
+  // Initialize EEPROM
+  EEPROM.begin(1024);
+
+  // Retrieve the stored energy consumed from EEPROM
+  EEPROM.get(eepromAddress, energyConsumed);
+
+  // Calculate initial pulse count based on retrieved energy consumed
+  pulseCount = energyConsumed * impulsesPerKWh;
+
+  // Display setup information
+  Serial.println("Energy meter pulse counting initialized.");
+
+  // Initialize Arduino IoT Cloud
+  ArduinoCloud.begin(ArduinoIoTPreferredConnection);
+  ArduinoCloud.addProperty(resetKwh, READWRITE, ON_CHANGE, onResetKwhChange);
+  ArduinoCloud.addProperty(relayState, READWRITE, ON_CHANGE, onRelayStateChange);
+  ArduinoCloud.addProperty(kwhConsumed, READ, ON_CHANGE);
+  ArduinoCloud.addProperty(cost, READ, ON_CHANGE);
+
+  setDebugMessageLevel(2);
+  ArduinoCloud.printDebugInfo();
+}
+
+void loop() {
+  // Arduino IoT Cloud update
+  ArduinoCloud.update();
+
+  // Check if the reset button is pressed locally
+  if (digitalRead(resetPin) == LOW) {
+    resetEnergyConsumption();
+  }
+
+  // Calculate energy consumption in kWh
+  energyConsumed = pulseCount / (float)impulsesPerKWh;
+  kwhConsumed = energyConsumed; // Update cloud variable
+
+  // Calculate the cost
+  cost = energyConsumed * pricePerKWh;
+
+  // Display energy consumption and cost on LCD
+  lcd.setCursor(0, 0);
+  lcd.print("Energy: ");
+  lcd.print(energyConsumed, 3);
+  lcd.print(" kWh");
+
+  lcd.setCursor(0, 1);
+  lcd.print("Cost: ");
+  lcd.print(cost, 2);
+  lcd.print(" Rs");
+
+  // Store the current energy consumed in EEPROM
+  EEPROM.put(eepromAddress, energyConsumed);
+  EEPROM.commit();
+
+  // Delay to reduce serial output rate (adjust as needed)
+  delay(1000);
+}
+
+void onResetKwhChange() {
+  if (resetKwh) {
+    resetEnergyConsumption();
+  }
+}
+
+void onRelayStateChange() {
+  digitalWrite(relayPin0, relayState ? HIGH : LOW);
+  digitalWrite(relayPin1, relayState ? HIGH : LOW);
+}
+
+void resetEnergyConsumption() {
+  pulseCount = 0;
+  energyConsumed = 0.0;
+  EEPROM.put(eepromAddress, energyConsumed);
+  EEPROM.commit();
+
+  // Display reset message
+  Serial.println("Energy consumption reset to 0 kWh");
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Energy Reset");
+  delay(1000);
+  lcd.clear();
+
+  resetKwh = false; // Reset the cloud variable
+
+  // Trigger Arduino reset by sending two low pulses
+                           // Wait for 100 ms
+  digitalWrite(arduinoResetPin, LOW); // Release the reset pin
+  delay(500);                          // Wait for 100 ms
+  digitalWrite(arduinoResetPin, HIGH);  // Second pulse
+  delay(500);  ; // Wait for 100 ms
+
+  // After sending the pulses, the Arduino will reset
+}
+
+void onCostChange()  {
+  // Add your code here to act upon Cost change
+}
 ```
 
 # IMAGES OF THE PROJECT
