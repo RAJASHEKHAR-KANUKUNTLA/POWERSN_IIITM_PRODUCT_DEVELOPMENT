@@ -159,7 +159,8 @@ The development and deployment of a low-cost IoT-based smart energy meter will a
 
 # USER DASHBOARD OF ARDUINO IOT CLOUD IN  MOBILE
 
-![WhatsApp Image 2024-07-10 at 13 03 21](https://github.com/RAJASHEKHAR-KANUKUNTLA/PROJECT-SEM-15/assets/146096356/ab2cfe90-cf67-4e91-8f97-14a23b1bfb78)
+ 
+![WhatsApp Image 2025-02-01 at 9 19 43 AM](https://github.com/user-attachments/assets/cfea3f62-cdbd-43eb-8b2b-4b1109108d49)
 
 
 
