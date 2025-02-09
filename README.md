@@ -94,44 +94,46 @@ The development and deployment of a low-cost IoT-based smart energy meter will a
 | 16x2 I2CLCD display                             |                     1             |  
 | Connecting wires                                |                     1Set          |
 |2 CH relay5V -240V                               |                     1             |
-|5v-voltage regulator adaptor                     |                     1             |
+|5 voltage regulator adaptor                      |                     1             |
 | Zero PCB                                        |                     1             | 
 |Switch                                           |                     1             |
 | Case box                                        |                     1             |
 
 # PIN OUT TABLE  
 
-|Component     	|    Pin/Connection	 |     Connected To|
-|----------------|--------------------|-----------------|
-|Energy Meter  	|Pulse Output	   |   Optocoupler (Input)|
-|Optocoupler(4N35)|	Input	Energy Meter |Pulse Output|
-|                 |Output	|VSDSquadron mini GPIO Input Pin (PD2)|
-|                |                  |                   |	
-|VSDSquadron mini|	GPIO Pin (PD2) 	|LM393 input|
-|                |GPIO Pin TX (PD5)|	GPIO Pin RX (16)|
-|                | GPIO Pin RX (PD6)|	GPIO Pin TX (17)|
-|                |                   |                  |
-|ESP32		       |                   |                  |
-|                | RX (16)        	|VSDSquadron mini TX (PD5)|
-|	        |TX (17)	|VSDSquadron mini RX (PD6)|
-|               |              |                          |
-|Relay module	|Signal pin	|VSDSquardron mini GPIO Pin PC3|
-|               |Vcc	|3.3V/5V (depending on relay)   |
-|               |	GND    |	GND            |
-|	        |COM	|Power Line (Common)           |
-|               |	NO (Normally Open)|	Load(Device Being Controlled)|
-|               |	NC (Normally Closed)|	Optional (for fail-safe connections)|
-|                |                          |                                       |	
-|5 volt adaptaor | 	Phase	|Phase of the energy meter                 |
-|                 |	Netural |	Netural of the energy meter         |
-|             |	5V	  |VSDSquadron mini|  VCC                                    |
-|              |	GND	|VSDSquadron mini | GND                    |                 
-|LM393 Comparator |D0      |  VSDSquadron mini   GPIO PD6                |
-|                 |5V       |VSDSquadron mini 5V|
-|                 |         |VSDSquadron mini GND|
-|I2C LCD |	SDA|	vsdsquadron mini GPIO (PC1)|
-|            |SCA|	vsdsquadron mini GPIO (PC2)|
+# Smart Energy Meter with VSDSquadron Mini & ESP32
 
+## Wiring Connections
+
+| **Component**          | **Pin/Connection**   | **Connected To**                           |
+|-----------------------|--------------------|------------------------------------------|
+| **Energy Meter**       | Pulse Output       | Optocoupler (Input)                      |
+| **Optocoupler (4N35)** | Input              | Energy Meter Pulse Output                |
+|                        | Output             | VSDSquadron Mini GPIO Input (PD2)        |
+| **VSDSquadron Mini**   | GPIO Pin (PD2)     | LM393 Input                              |
+|                        | GPIO Pin (PD3)     | ESP32 (D15)                              |
+| **ESP32**             |  ESP32 (D14)         | VSDSquadron Mini (PD4)                 |
+| **Relay Module**       | Signal Pin         | ESP32 (D13)                             |
+|                        | VCC                | 3.3V/5V (depending on relay)             |
+|                        | GND                | GND                                      |
+|                        | COM                | Power Line (Common)                      |
+|                        | NO (Normally Open) | Load (Device Being Controlled)           |
+|                        | NC (Normally Closed) | Optional (for fail-safe connections)     |
+| **5V Adapter**        | Phase              | Phase of the Energy Meter                |
+|                        | Neutral            | Neutral of the Energy Meter              |
+|                        | 5V                 | VSDSquadron Mini & ESP32 VCC              |
+|                        | GND                | VSDSquadron Mini & ESP32 GND              |
+| **LM393 Comparator**  | D0                 | VSDSquadron Mini GPIO PD2                |
+|                        | VCC                 | VSDSquadron Mini 3V                      |
+|                        | GND                | VSDSquadron Mini GND                     |
+| **I2C LCD**          | SDA                 | VSDSquadron Mini GPIO (PC1)              |
+|                        | SCL                | VSDSquadron Mini GPIO (PC2)              |
+
+## Notes:
+- The **Optocoupler (4N35)** is used to isolate the energy meter pulse output from the microcontroller.
+- The **LM393 Comparator** helps in processing the pulse signals.
+- The **ESP32** handles communication with the VSDSquadron Mini.
+- The **Relay Module** is used to control a load (appliance) based on energy consumption monitoring.
 
 # BLOCK DIAGRAM OF THE SYSTEM 
 ![Blank diagram (1)](https://github.com/user-attachments/assets/c3e824d7-7cd9-4bdf-a4bd-6e9d4d6815ec)
