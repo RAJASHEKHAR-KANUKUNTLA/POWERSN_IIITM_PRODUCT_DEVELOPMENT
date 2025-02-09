@@ -33,7 +33,7 @@ TEAM K-TECH Sree Kanna
 
 - The IoT Smart Energy Meter project aims to deliver a low-cost, efficient solution for monitoring energy consumption by utilizing the VSD Squadron Mini Board with an LCD display and a relay module. This system measures real-time energy usage and presents the data on the LCD screen, ensuring immediate and local monitoring.
 
-- To enable cloud-based communication, the project incorporates an ESP module, which facilitates TX and RX communication for transmitting data to an IoT platform. This integration allows users to remotely track and analyze energy consumption patterns, making the solution suitable for a wide range of applications, from smart homes to industrial settings.
+- To enable cloud-based communication, the project incorporates an ESP module, which facilitates wifi communication for transmitting data to an IoT platform. This integration allows users to remotely track and analyze energy consumption patterns, making the solution suitable for a wide range of applications, from smart homes to industrial settings.
 
 - By combining the advanced features of the VSD Squadron Mini Board and IoT connectivity, the project aims to enhance energy
 
@@ -85,19 +85,19 @@ The development and deployment of a low-cost IoT-based smart energy meter will a
 
 # TABLE OF COMPONENTS REQUIRED FOR THE PRODUCT
 
-| Item    | Quantity |
-|---------|-----|
-|Single phase Energy meter 240v 50Hz     | 1  | 
-|  4N35 Optocoupler   | 1  | 
-|VSDSquadron mini| 1|
-| ESP32 MODULE | 1  |  |
-| 16*2 i2cLCD display | 1 | Display |
-| Connecting wires | 1Set |
-|2 CH relay5V -240V|1|
-|5v-voltage regulator adaptor| 1|
-| Zero PCB | 1|
-|Switch | 1 |
-| Case box | 1|
+| Item                                            |             Quantity              |
+|---------                                        |            -----                  |
+|Single phase Energy meter 240v 50Hz              |                     1             | 
+|  4N35 Optocoupler                               |                     1             | 
+|VSDSquadron mini                                 |                     1             |
+| ESP32 MODULE                                    |                     1             | 
+| 16x2 I2CLCD display                             |                     1             |  
+| Connecting wires                                |                     1Set          |
+|2 CH relay5V -240V                               |                     1             |
+|5v-voltage regulator adaptor                     |                     1             |
+| Zero PCB                                        |                     1             | 
+|Switch                                           |                     1             |
+| Case box                                        |                     1             |
 
 # PIN OUT TABLE  
 
