@@ -1,4 +1,4 @@
-# POWERSN_SMART_ENERGY_METER_IITM_PRODUCT_DEVELOPMENT
+# POWERSN SMART ENERGY METER IITM PRODUCT DEVELOPMENT
  --------------------------------------------------
 TEAM K-TECH Sree Kanna 
 # Table of the Content
@@ -139,7 +139,8 @@ The development and deployment of a low-cost IoT-based smart energy meter will a
 - The **Relay Module** is used to control a load (appliance) based on energy consumption monitoring.
 
 # BLOCK DIAGRAM OF THE SYSTEM 
-![Blank diagram (1)](https://github.com/user-attachments/assets/c3e824d7-7cd9-4bdf-a4bd-6e9d4d6815ec)
+![Blank diagram (2)](https://github.com/user-attachments/assets/ea67b2c5-ab37-4ff1-8182-ba275ba62140)
+
 ---------------
 
 # CIRCUIT DIAGRAM OF THE SYSTEM 
