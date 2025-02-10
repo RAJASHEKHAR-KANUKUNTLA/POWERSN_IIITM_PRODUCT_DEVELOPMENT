@@ -113,7 +113,7 @@ The development and deployment of a low-cost IoT-based smart energy meter will a
 |                        | Output             | VSDSquadron Mini GPIO Input (PD2)        |
 | **VSDSquadron Mini**   | GPIO Pin (PD2)     | LM393 Input                              |
 |                        | GPIO Pin (PD3)     | ESP32 (D15)                              |
-| **ESP32**             |  ESP32 (D14)         | VSDSquadron Mini (PD4)                 |
+| **Internal Reset**    |  ESP32 (D14)         | VSDSquadron Mini (PD4)                 |
 | **Relay Module**       | Signal Pin         | ESP32 (D13)                             |
 |                        | VCC                | 3.3V/5V (depending on relay)             |
 |                        | GND                | GND                                      |
@@ -131,7 +131,6 @@ The development and deployment of a low-cost IoT-based smart energy meter will a
 |                        | SCL                | VSDSquadron Mini GPIO (PC2)              |
 |                        | VCC                 | VSDSquadron Mini 5V                      |
 |                        | GND                | VSDSquadron Mini GND                     |
-
 ## Notes:
 - The **Optocoupler (4N35)** is used to isolate the energy meter pulse output from the microcontroller.
 - The **LM393 Comparator** helps in processing the pulse signals.
