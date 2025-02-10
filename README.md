@@ -1,4 +1,4 @@
-# POWERSN_IIITM_PRODUCT_DEVELOPMENT
+# POWERSN_SMART_ENERGY_METER_IITM_PRODUCT_DEVELOPMENT
  --------------------------------------------------
 TEAM K-TECH Sree Kanna 
 # Table of the Content
