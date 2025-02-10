@@ -418,8 +418,13 @@ void onCostChange()  {
 ```
 
 # IMAGES OF THE PROJECT
+![WhatsApp Image 2025-02-10 at 2 19 44 PM](https://github.com/user-attachments/assets/06d6a0a3-83c5-4be5-a5f1-5294343d0f87)
 
 ----------
+
+
+
+
 
 # DEMONSTRATION VIDEO OF THE PRODUCT  
 
