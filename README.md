@@ -159,12 +159,14 @@ The development and deployment of a low-cost IoT-based smart energy meter will a
 - Overall, the Arduino IoT Cloud simplifies the development process, offering a reliable and scalable solution for IoT projects. By using the Arduino IoT Cloud, this smart energy meter project can provide real-time monitoring, remote control, and data analysis, enhancing energy management and enabling smarter decision-making.
 
 #  USER DASHBOARD OF ARDUINO IOT CLOUD IN PC 
-![Screenshot (145)](https://github.com/RAJASHEKHAR-KANUKUNTLA/PROJECT-SEM-15/assets/146096356/448d21a2-a2d9-43b7-8e12-694bdace533b)
+
+![Screenshot (235)](https://github.com/user-attachments/assets/ef0668d3-cf12-4b06-8213-0431355d34c0)
 
 
 # USER DASHBOARD OF ARDUINO IOT CLOUD IN  MOBILE
  
-![WhatsApp Image 2025-02-01 at 9 19 43 AM](https://github.com/user-attachments/assets/cfea3f62-cdbd-43eb-8b2b-4b1109108d49)
+
+![WhatsApp Image 2025-02-10 at 18 05 35](https://github.com/user-attachments/assets/22b94917-1b79-4fdd-97ce-385a74237b53)
 
 
 # SOURCE CODE OF VSDSQUARDRON MINI AND ESP32 
@@ -426,13 +428,12 @@ void onCostChange()  {
 
 
 
-# DEMONSTRATION VIDEO OF THE PRODUCT  
-
-
-
+# DEMONSTRATION VIDEO OF WORKING 
 
 https://github.com/user-attachments/assets/905f6e65-d3f0-4a9c-80a3-a6ab19f6df79
 
+
+ # DEMONSTRATION VIDEO OF FINAL PRODUCT
 
  
 
@@ -441,7 +442,7 @@ https://github.com/user-attachments/assets/905f6e65-d3f0-4a9c-80a3-a6ab19f6df79
 
 # ABOUT 
 We are Team K-Tech Sree Kanna , Rajashekhar and Navaneeth Kumar, and we have developed a low-cost IoT-based smart energy meter designed for the DIR-V Product Development Hackathon. Our system seamlessly integrates hardware and software components to deliver an efficient and scalable energy management solution
-The hardware includes an energy meter with pulse output, an optocoupler for electrical isolation, the VSD Squadron Mini Board for processing, an ESP module for TX/RX-based cloud communication, an LCD display for local data visualization, and a relay module for turning on and off the mains supply control functions.
+The hardware includes an energy meter with pulse output, an optocoupler for electrical isolation, the VSD Squadron Mini Board for processing, an ESP module for wifi cloud communication, an LCD display for local data visualization, and a relay module for turning on and off the mains supply control functions.
 - Users can observe their energy consumption values in real-time on their mobile devices via the Arduino IoT Remote app, which also offers the capability to turn the system on or off if the bill is not paid, adding a layer of financial management. The app further allows users to reset the data, starting a new billing cycle. This smart energy meter system can be implemented in various settings, including home energy meters, industrial applications, EV charging stations, and prepaid energy meters, offering versatile and scalable solutions for different energy management needs. The integration of these technologies offers real-time energy monitoring, cost savings, user control, enhanced safety, and cloud-based analysis. By providing comprehensive and reliable energy management, our smart energy meter solution empowers users to optimize their energy usage and reduce costs effectively.
 - This smart energy meter system is versatile and can be implemented in home energy meters, industrial applications, EV charging stations, and prepaid energy metering, providing scalable solutions for different energy management needs. By integrating real-time monitoring, cost savings, user control, enhanced safety, and cloud-based analysis, our solution empowers users to optimize their energy usage and reduce costs effectively.
   
