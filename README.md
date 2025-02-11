@@ -440,8 +440,9 @@ https://github.com/user-attachments/assets/905f6e65-d3f0-4a9c-80a3-a6ab19f6df79
  https://drive.google.com/file/d/1prFfpnhG7gM3UL4GvOCPkTISeyRGW-vz/view?usp=sharing
  
 
+# Acknowledgment
 
-
+I would like to sincerely thank * [Kunal Ghosh](https://github.com/kunalg123), for organizing this event and providing us with the incredible opportunity to participate in the hackathon. His support and guidance have been invaluable in shaping this project.
 
 # ABOUT 
 We are Team K-Tech Sree Kanna , Rajashekhar and Navaneeth Kumar, and we have developed a low-cost IoT-based smart energy meter designed for the DIR-V Product Development Hackathon. Our system seamlessly integrates hardware and software components to deliver an efficient and scalable energy management solution
