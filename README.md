@@ -86,19 +86,19 @@ The development and deployment of a low-cost IoT-based smart energy meter will a
 
 # TABLE OF COMPONENTS REQUIRED FOR THE PRODUCT
 
-| Item                                            |             Quantity              |
-|---------                                        |            -----                  |
-|Single phase Energy meter 240v 50Hz              |                     1             | 
-|  4N35 Optocoupler                               |                     1             | 
-|VSDSquadron mini                                 |                     1             |
-| ESP32 MODULE                                    |                     1             | 
-| 16x2 I2CLCD display                             |                     1             |  
-| Connecting wires                                |                     1Set          |
-|2 CH relay5V -240V                               |                     1             |
-|5 voltage regulator adaptor                      |                     1             |
-| Zero PCB                                        |                     1             | 
-|Switch                                           |                     1             |
-| Case box                                        |                     1             |
+| Item                                            |             Quantity              |  COST       |
+|---------                                        |            -----                  |   ------    |
+|Single phase Energy meter 240v 50Hz              |                     1             |    500      |
+|  4N35 Optocoupler                               |                     1             |     10      |
+|VSDSquadron mini                                 |                     1             |    999      |
+| ESP32 MODULE                                    |                     1             |    250      |
+| 16x2 I2CLCD display                             |                     1             |    200      |
+| Connecting wires                                |                     1Set          |    50       |
+|2 CH relay5V -240V                               |                     1             |    100      |
+|5 voltage regulator adaptor                      |                     1             |    100      |
+| Zero PCB                                        |                     1             |    150      |
+| Case box                                        |                     1             |    200      |
+|                                                 |                                   |    2559     |
 
 # PIN OUT TABLE  
 
