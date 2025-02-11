@@ -8,7 +8,7 @@ TEAM K-TECH Sree Kanna
 - [OPERATAION OF THE SYSTEM](#OPERATAION-OF-THE-SYSTEM)
 - [FEATURES AND BENEFITES OF THE PRODUCT](#FEATURES-AND-BENEFITES-OF-THE-PRODUCT)
 - [ADVANTAGES OF THE PRODUCT](#ADVANTAGES-OF-THE-PRODUCT)
-- [TABLE OF COMPONENTS REQUIRED FOR THE PRODUCT](#TABLE-OF-COMPONENTS-REQUIRED-FOR-THE-PRODUCT)
+- [TABLE OF COMPONENTS REQUIRED & COST FOR THE PRODUCT](#TABLE OF COMPONENTS REQUIRED & COST FOR THE PRODUCT)
 - [PIN OUT TABLE](#PIN-OUT-TABLE)
 - [BLOCK DIAGRAM OF THE SYSTEM](#BLOCK-DIAGRAM-OF-THE-SYSTEM)
 - [CIRCUIT DIAGRAM OF THE SYSTEM](#CIRCUIT-DIAGRAM-OF-THE-SYSTEM)
@@ -84,7 +84,7 @@ The development and deployment of a low-cost IoT-based smart energy meter will a
 **8.Fraud Detection:** Enhanced monitoring capabilities allow for the detection of tampering and unauthorized usage, helping to reduce energy theft.
 
 
-# TABLE OF COMPONENTS REQUIRED FOR THE PRODUCT
+# TABLE OF COMPONENTS REQUIRED & COST FOR THE PRODUCT
 
 | Item                                            |             Quantity              |  COST       |
 |---------                                        |            -----                  |   ------    |
